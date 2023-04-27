@@ -1,0 +1,148 @@
+:root {
+    --background: #f6f6f6;
+    --font: #222;
+    --border: #333;
+    --screen: #eee;
+    --calculator: #aaa;
+    --btn: #eee;
+    --btn-hover: #ddd;
+    --btn-active: #ccc;
+    --btn-red: #faa;
+    --btn-red-hover: #e99;
+    --btn-red-active: #d88;
+    --btn-blue: #aaf;
+    --btn-blue-hover: #99e;
+    --btn-blue-active: #88d;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
+
+/* main area */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cbody{
+    width: 400px;
+    padding: 20px;
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    background-color: #aaa;
+}
+
+#screen{
+    padding: 10px 20px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #eee;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+
+
+#currentEqu{
+    min-height: 32px;
+}
+
+#currentNum{
+    font-size: 40px;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+}
+
+button{
+    border: 2px solid var(--border);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--btn-hover);
+}
+
+button:active{
+    background-color: var(--btn-active);
+}
+
+#clearBtn{
+    grid-column: span 2;
+    background-color: var(--btn-red);
+}
+
+#clearBtn:hover{
+    background-color: var(--btn-red-hover);
+}
+
+#clearBtn:active{
+    background-color: var(--btn-red-active);
+}
+
+#deleteBtn{
+    grid-column: span 2;
+    background-color: var(--btn-blue);
+}
+
+#deleteBtn:hover{
+    background-color: var(--btn-blue-hover);
+}
+
+#deleteBtn:active{
+    background-color: var(--btn-blue-active);
+}
+
+
+/* footer area */
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+body{
+    margin-bottom: 100px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.fa-github {
+    color: var(--border);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
